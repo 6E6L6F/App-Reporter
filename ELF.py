@@ -13,10 +13,10 @@ class SpamReport:
                 return open(self.File_ ,'r').read().split('\n') 
             
             except FileNotFoundError as NF:
-                assert "File Not Found : " + NF
+                raise "File Not Found : " + NF
             
             except KeyboardInterrupt as Key:
-                assert "Cancel With " + Key
+                raise "Cancel With " + Key
     def __Context__(self) -> 'ssl':
         return ssl.create_default_context()
     
@@ -31,13 +31,13 @@ class SpamReport:
             return True
         
         except Exception as ex:
-            assert "Exception Error : " + ex
+            raise "Exception Error : " + ex
 
         except KeyboardInterrupt as Key:
-            assert "Cancel Send Meil With : " + Key
+            raise "Cancel Send Meil With : " + Key
 
         except TimeoutError as To:
-            assert "Timeout Error : " + To
+            raise "Timeout Error : " + To
         
         except:
             return False
@@ -52,13 +52,13 @@ class SpamReport:
             return True
 
         except Exception as ex:
-            assert "Exception Error : " + ex
+            raise "Exception Error : " + ex
 
         except KeyboardInterrupt as Key:
-            assert "Cancel Send Meil With : " + Key
+            raise "Cancel Send Meil With : " + Key
 
         except TimeoutError as To:
-            assert "Timeout Error : " + To
+            raise "Timeout Error : " + To
         
         except:
             return False
