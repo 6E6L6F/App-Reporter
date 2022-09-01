@@ -34,7 +34,7 @@ class SpamReport:
             raise "Exception Error : " + ex
 
         except KeyboardInterrupt as Key:
-            raise "Cancel Send Meil With : " + Key
+            raise "Cancel Send Emeil With : " + Key
 
         except TimeoutError as To:
             raise "Timeout Error : " + To
@@ -55,7 +55,7 @@ class SpamReport:
             raise "Exception Error : " + ex
 
         except KeyboardInterrupt as Key:
-            raise "Cancel Send Meil With : " + Key
+            raise "Cancel Send Emeil With : " + Key
 
         except TimeoutError as To:
             raise "Timeout Error : " + To
