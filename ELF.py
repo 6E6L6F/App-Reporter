@@ -16,8 +16,9 @@ class SpamReport:
                 raise NF
             
             except KeyboardInterrupt as Key:
-                raise Key
-    def __Context__(self) -> 'ssl':
+                exit(0)
+                
+    def __Context__(self):
         return ssl.create_default_context()
     
     def SendWithGmail(self) -> bool:
@@ -34,13 +35,11 @@ class SpamReport:
             raise  ex
 
         except KeyboardInterrupt as Key:
-            raise Key
+            exit(0)
 
         except TimeoutError as To:
             raise To
         
-        except:
-            return False
     def SendWithYahoo(self) -> bool:
         try:
             for self.Yahoo_Pass in self.__ReadFile__():
@@ -55,13 +54,10 @@ class SpamReport:
             raise  ex
 
         except KeyboardInterrupt as Key:
-            raise  Key
+            exit(0)
 
         except TimeoutError as To:
-            raise To
-        
-        except:
-            return False
+            raise To 
     
     def __enter__(self) -> 'SpamReport':
            return self
