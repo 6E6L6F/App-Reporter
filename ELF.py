@@ -12,10 +12,10 @@ class SpamReport:
             try:
                 return open(self.File_ ,'r').read().split('\n') 
             
-            except FileNotFoundError as NF:
-                raise NF
+            except FileNotFoundError:
+                raise FileNotFoundError("File Not Found In Dircetory")
             
-            except KeyboardInterrupt as Key:
+            except KeyboardInterrupt:
                 exit(0)
                 
     def __Context__(self):
@@ -31,14 +31,14 @@ class SpamReport:
                     self.Gmail_.quit()
             return True
         
-        except Exception as ex:
-            raise  ex
+        except Exception:
+            raise  Exception("Error")
 
-        except KeyboardInterrupt as Key:
+        except KeyboardInterrupt:
             exit(0)
 
         except TimeoutError as To:
-            raise To
+            raise TimeoutError("please check your connections internet")
         
     def SendWithYahoo(self) -> bool:
         try:
@@ -50,16 +50,16 @@ class SpamReport:
                     self.Yahoo_.quit()
             return True
 
-        except Exception as ex:
-            raise  ex
+        except Exception:
+            raise  Exception("Error")
 
-        except KeyboardInterrupt as Key:
+        except KeyboardInterrupt:
             exit(0)
 
-        except TimeoutError as To:
-            raise To 
+        except TimeoutError:
+            raise TimeoutError("please check your connections internet")
     
-    def __enter__(self) -> 'SpamReport':
+    def __enter__(self):
            return self
        
     def __exit__(self, *args, **kwargs):
