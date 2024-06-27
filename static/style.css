@@ -1,0 +1,50 @@
+body {
+    background-color:rgb(0, 0, 0);
+}
+
+.sucsess {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 2px;
+    background-color: green;
+}
+
+.error {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: red;
+}
+
+input[type="submit"]{
+    margin-top: 5px;
+}
+.bg-dark-email{
+    background-color: rgb(223, 15, 15);
+    padding: 10px !important;
+}
+
+.bg-dark-upload {
+    background-color: rgba(76, 76, 76, 0.886);
+    padding: 10px !important;
+}
+textarea {
+    color: rgba(255, 0, 0, 0.49) !important;
+    background-color: rgb(0, 0, 0) !important;
+}
+input[type="email"] {
+    color: rgba(255, 0, 0, 0.49) !important;
+    background-color: rgb(0, 0, 0) !important;
+}
+
+input[type="file"] {
+    color:  rgba(255, 0, 0, 0.49) !important;
+    background-color: rgb(0, 0, 0) !important;
+}
+label {
+    margin-bottom: 5px;
+}
+select {
+    color:  rgba(255, 0, 0, 0.664) !important;
+    background-color: rgb(0, 0, 0) !important;
+}
